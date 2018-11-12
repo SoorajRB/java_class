@@ -8,7 +8,7 @@ public class HelloWorldCommand {
 		
 		try {
 			
-			Process p = Runtime.getRuntime().exec("mkdir /home/sooraj/Hello_World_From_Nomad");
+			Process p = Runtime.getRuntime().exec("curl --request POST  --data @/home/vagrant/jobfiles/curl.json http://38.130.230.62:4646/v1/jobs");
 			BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
 			BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
 			
